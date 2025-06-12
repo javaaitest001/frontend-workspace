@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js050_main_popup.html</title>
+    <style>
+        div#popup {
+            width: 301px;
+            height: 351px;
+            border: 1px solid black;
+            position: fixed;
+            left: 30%;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            유럽 공격수 최대어의 이적이 물거품이 될 위기다. 회장이 직접 판을 엎어버렸다.
+
+            영국 매체 'BBC'는 12일(한국시간) "빅토르 요케레스(28·스포르팅CP)는 맨체스터 유나이티드, 아스널과 긴밀히 연결됐다. 올여름 그는 스포르팅과 7000만 유로(약 1103억 원)에 떠날
+            수 있는 조건에
+            합의했다는 보도가 널리 퍼졌다"며 "하지만 프레데리코 바란다스 스포르팅 회장은 해당 소문을 일축했다"고 밝혔다.
+            매체에 따르면 바란다스 회장은 요케레스 이적설에 대해 "요케레스는 7000만 유로에 스포르팅을 떠나지 않을 것이라 장담할 수 있다. 나는 해당 약속을 한 적이 없다"며 "게다가 스포르팅은
+            요케레스에 대한 이적 제안을
+            받은 적도 없다. 오늘이나 지난 시즌 모두 마찬가지다"라고 말했다.
+
+            요케레스는 스포르팅 두 시즌 동안 102경기 97골을 몰아친 대형 스트라이커다. 잉글랜드 프리미어리그(EPL)의 맨유와 아스널을 비롯해 유럽 빅클럽들이 노리는 공격수 최대어로 저명하다.
+        </p>
+        <div id="popup">
+            <img src="images/popup.jpg" usemap="#pop" />
+
+
+            <map name="pop" id="pop">
+                <!--coors='x start, y start, x end, y end'-->
+                <area shape="rect" coords="255,332,290,345" href="#" alt="창닫기" /> </map>
+        </div>
+        <script>
+            let close = document.querySelector('map#pop area');
+            close.onclick = (e) => {
+                let popup = document.querySelector('div#popup');
+                popup.style.display = "none";
+                e.preventDefault();
+            }
+        </script>
+    </div>
+</body>
+
+</html>
